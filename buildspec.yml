@@ -12,6 +12,9 @@ phases:
     commands:
       - echo Building React project...
       - npm run build
+      - echo Copying appspec and scripts into artifact...
+      - cp appspec.yml dist/
+      - cp -r scripts dist/
 
 artifacts:
   files:
