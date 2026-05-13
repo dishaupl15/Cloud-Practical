@@ -3,16 +3,17 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18
+      nodejs: 20
     commands:
-      - cd Cloud-Practical
+      - echo Installing dependencies...
       - npm install
 
   build:
     commands:
+      - echo Building React project...
       - npm run build
 
 artifacts:
   files:
     - '**/*'
-  base-directory: Cloud-Practical/dist
+  base-directory: dist
